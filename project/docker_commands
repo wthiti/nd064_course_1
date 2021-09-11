@@ -1,11 +1,32 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
+docker build . -t techtrends
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
+# the current running container is named romantic_goldwasser
+docker logs romantic_goldwasser
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+[2021-09-11 09:14:05,841] INFO in _internal:  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+[2021-09-11 09:14:31,561] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:14:31] "GET / HTTP/1.1" 200 -
+[2021-09-11 09:14:31,610] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:14:31] "GET /static/css/main.css HTTP/1.1" 200 -
+[2021-09-11 09:14:32,018] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:14:32] "GET /favicon.ico HTTP/1.1" 404 -
+[2021-09-11 09:15:50,182] INFO in app: GET Article 2020 CNCF Annual Report
+[2021-09-11 09:15:50,184] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:15:50] "GET /1 HTTP/1.1" 200 -
+[2021-09-11 09:15:54,033] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:15:54] "GET /create HTTP/1.1" 200 -
+[2021-09-11 09:15:58,975] INFO in app: CREATE Article TEST 2
+[2021-09-11 09:15:58,975] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:15:58] "POST /create HTTP/1.1" 302 -
+[2021-09-11 09:15:58,980] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:15:58] "GET / HTTP/1.1" 200 -
+[2021-09-11 09:16:00,559] INFO in app: GET Article TEST 2
+[2021-09-11 09:16:00,560] INFO in _internal: 172.17.0.1 - - [11/Sep/2021 09:16:00] "GET /7 HTTP/1.1" 200 -
