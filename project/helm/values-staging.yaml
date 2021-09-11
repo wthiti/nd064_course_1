@@ -1,0 +1,27 @@
+namespace:
+  name: staging
+ 
+service:
+  port: 5111
+  type: ClusterIP
+  targetPort: 3111
+  protocol: TCP
+
+image:
+  repository: magicnote/techtrends
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+replicaCount: 3
+
+resources:
+  requests:
+    cpu: 300m
+    memory: 90Mi
+  limits:
+    memory: 128Mi
+    cpu: 500m
+
+containerPort: 3111
+livenessProbePath: /healthz
+readinessProbePath: /healthz

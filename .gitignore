@@ -1,0 +1,7 @@
+.DS_Store
+project/.DS_Store
+project/.idea/
+project/.vagrant/
+project/techtrends/.idea/
+project/techtrends/database.db
+project/screenshots/.DS_Store
