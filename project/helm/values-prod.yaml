@@ -9,7 +9,7 @@ service:
 
 image:
   repository: magicnote/techtrends
-  tag: alpine
+  tag: latest
   pullPolicy: Always
 
 replicaCount: 5
